@@ -1,0 +1,72 @@
+:root {
+	--fg: #222;
+	--bg: orangered;
+	--lbg: coral;
+	--light: white;
+	--light1: #aaa;
+}
+html {
+	padding: 0 ;
+	margin: 0;
+	box-sizing: border-box;
+	background-color: var(--fg);
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 16px;
+	text-align: center;
+	/* user cannot select text displayed */
+	user-select: none;
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+#container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2.5rem;
+	margin-top: 2.5rem;
+	/*spaces the container equally*/
+	justify-content: space-around;
+}
+#container .card {
+	box-shadow: 0 0 10px 6px rgba(0,0,0,0.4);
+}
+#container .card .french{
+	width: 360px;
+	height: 75px;
+	transition: 0.5s;
+	background:var(--fg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	transform: translateY(75px);
+	border-bottom: 2px solid var(--bg);
+	overflow-x: auto;
+}
+#container .card:hover .french{
+	transform: translateY(0);
+	background-color: var(--bg);
+	opacity: 1;
+}
+#container .card:hover h3 {
+	color: var(--light);
+}
+#container .card .english {
+	width: 360px;
+	height: 75px;
+	background-color: var(--lbg);
+	border-top: 3px solid var(--fg);
+	opacity: 1;
+	padding-top: 0.5rem;
+	overflow-x: auto;
+}
+h3 {
+	color: var(--light1);
+	font-size: 1rem;
+}
+h2 {
+	color: var(--fg);
+	background: var(--light1);
+	padding: .5rem 0;
+}
